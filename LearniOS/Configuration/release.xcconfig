@@ -1,0 +1,42 @@
+//
+// release.xcconfig
+// LearniOS
+//
+// Created by DEEP on 2021/8/1
+// Copyright © 2021 DEEP. All rights reserved.
+//
+        
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "common.xcconfig"
+
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) $(APPBRAND_MICROS_COMMON) DEBUG
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) $(APPBRAND_MICROS_DEBUG)
+
+// Debug 下的编译选项
+ONLY_ACTIVE_ARCH = YES
+DEBUG_INFORMATION_FORMAT = dwarf
+ENABLE_TESTABILITY = YES
+VALIDATE_PRODUCT = NO
+DEPLOYMENT_POSTPROCESSING = NO
+COPY_PHASE_STRIP = N
+STRIP_INSTALLED_PRODUCT = NO
+GCC_OPTIMIZATION_LEVEL = 0
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+ENABLE_NS_ASSERTIONS = YES
+MTL_ENABLE_DEBUG_INFO = YES
+LLVM_LTO = NO
+LD_GENERATE_MAP_FILE = NO
+CLANG_MODULES_AUTOLINK = NO
+
+// Code Signing
+CODE_SIGN_STYLE = Manual
+CODE_SIGN_IDENTITY = iPhone Developer
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer
+CODE_SIGN_ENTITLEMENTS = AppBrandInHouse.entitlements
+DEVELOPMENT_TEAM = XXHND5J98K
+PROVISIONING_PROFILE_SPECIFIER = comssiphonearticleAllArticleinHouse
+
+#include "user.xcconfig"

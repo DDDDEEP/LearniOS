@@ -1,0 +1,24 @@
+//
+// user.xcconfig
+// LearniOS
+//
+// Created by DEEP on 2021/8/1
+// Copyright © 2021 DEEP. All rights reserved.
+//
+        
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+// 如果有开发证书，则在 /Users/${username}/Library/MobileDevice/Provisioning Profiles，
+// 填写对应的 identity, uuid
+//CODE_SIGN_ENTITLEMENTS =
+//CODE_SIGN_IDENTITY = Apple Development: xxx@gmail.com (BT7ZL9CGHA)
+//CODE_SIGN_IDENTITY[sdk=iphoneos*] = Apple Development: xxx@gmail.com (BT7ZL9CGHA)
+//DEVELOPMENT_TEAM = BT7ZL9CGHA
+//PROVISIONING_PROFILE =e01292cc-2ed5-4266-95f8-e247c9bb49a7
+//PROVISIONING_PROFILE_SPECIFIER =e01292cc-2ed5-4266-95f8-e247c9bb49a7
+//
+//CODE_SIGN_STYLE = Manual
+//PROVISIONING_STYLE = Manual

@@ -1,0 +1,32 @@
+//
+// debug.xcconfig
+// LearniOS
+//
+// Created by DEEP on 2021/8/1
+// Copyright © 2021 DEEP. All rights reserved.
+//
+        
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "common.xcconfig"
+
+ONLY_ACTIVE_ARCH = NO
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+ENABLE_TESTABILITY = NO
+VALIDATE_PRODUCT = YES
+DEPLOYMENT_POSTPROCESSING = YES
+COPY_PHASE_STRIP = YES
+STRIP_INSTALLED_PRODUCT = YES
+GCC_OPTIMIZATION_LEVEL = s
+SWIFT_OPTIMIZATION_LEVEL = -O
+ENABLE_NS_ASSERTIONS = NO
+MTL_ENABLE_DEBUG_INFO = NO
+LD_GENERATE_MAP_FILE = YES
+CLANG_MODULES_AUTOLINK = YES
+
+//Code Sign
+
+
+#include "user.xcconfig"
