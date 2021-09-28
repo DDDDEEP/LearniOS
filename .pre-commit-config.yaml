@@ -1,0 +1,9 @@
+repos:
+    - repo: local
+      hooks:
+          - id: checks_keyword_pre_commit
+            name: checks_keyword_pre_commit
+            entry: .git_hooks/checks_keyword_pre_commit.py
+            language: python
+            stages: [commit]
+            additional_dependencies: ["GitPython"]
