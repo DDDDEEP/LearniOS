@@ -23,7 +23,7 @@ extensions = [
 print("Checking keywords: '{keywords}'".format(keywords=keywords))
 print("Checking file extension: '{extensions}'".format(extensions=extensions))
 
-repo = git.Repo.init(path='.')
+repo = git.Repo('.')
 
 for i in repo.index.diff("HEAD"):
     fname = i.a_path

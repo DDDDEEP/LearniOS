@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        var friend = OCObject()
+    #if IS_IN_HOUSE
+        NSLog("123")
+    #endif
     }
 
 

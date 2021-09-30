@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2B3E8ABB26B6DA02002BB32B"
-               BuildableName = "LearniOSInHouse.app"
+               BuildableName = "LearniOS.app"
                BlueprintName = "LearniOSInHouse"
                ReferencedContainer = "container:LearniOS.xcodeproj">
             </BuildableReference>
@@ -44,12 +44,21 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2B3E8ABB26B6DA02002BB32B"
-            BuildableName = "LearniOSInHouse.app"
-            BlueprintName = "LearniOSInHouse"
+            BlueprintIdentifier = "2B0591D826AEA21400F8D743"
+            BuildableName = "LearniOS.app"
+            BlueprintName = "LearniOS"
             ReferencedContainer = "container:LearniOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2B3E8ABB26B6DA02002BB32B"
+            BuildableName = "LearniOS.app"
+            BlueprintName = "LearniOSInHouse"
+            ReferencedContainer = "container:LearniOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "LearniOSRelease"
@@ -62,7 +71,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B3E8ABB26B6DA02002BB32B"
-            BuildableName = "LearniOSInHouse.app"
+            BuildableName = "LearniOS.app"
             BlueprintName = "LearniOSInHouse"
             ReferencedContainer = "container:LearniOS.xcodeproj">
          </BuildableReference>
