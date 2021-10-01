@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B0591DD26AEA21400F8D743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0591DC26AEA21400F8D743 /* AppDelegate.swift */; };
-		2B0591DF26AEA21400F8D743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0591DE26AEA21400F8D743 /* SceneDelegate.swift */; };
-		2B0591E126AEA21400F8D743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0591E026AEA21400F8D743 /* ViewController.swift */; };
 		2B0591E426AEA21400F8D743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0591E226AEA21400F8D743 /* Main.storyboard */; };
 		2B0591E626AEA21700F8D743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B0591E526AEA21700F8D743 /* Assets.xcassets */; };
 		2B0591E926AEA21700F8D743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0591E726AEA21700F8D743 /* LaunchScreen.storyboard */; };
@@ -21,6 +18,8 @@
 		2B3E8AC426B6DA02002BB32B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0591E726AEA21700F8D743 /* LaunchScreen.storyboard */; };
 		2B3E8AC526B6DA02002BB32B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B0591E526AEA21700F8D743 /* Assets.xcassets */; };
 		2B3E8AC626B6DA02002BB32B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0591E226AEA21400F8D743 /* Main.storyboard */; };
+		2BD34751270755D20041C78E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0591DC26AEA21400F8D743 /* AppDelegate.swift */; };
+		2BD34752270755D50041C78E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0591DE26AEA21400F8D743 /* SceneDelegate.swift */; };
 		B4E363DDDB4D1D0A44DC9F7E /* Pods_LearniOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC4980C9B84F8E8A99314FA /* Pods_LearniOS.framework */; };
 		C075232733869150DDDC5514 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		C21EA519D3376516EB39011F /* Pods_LearniOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF65F9958F2B162768ADABF /* Pods_LearniOSTests.framework */; };
@@ -142,14 +141,14 @@
 				2B0591DE26AEA21400F8D743 /* SceneDelegate.swift */,
 				2B0591DC26AEA21400F8D743 /* AppDelegate.swift */,
 				2B0591E026AEA21400F8D743 /* ViewController.swift */,
-				2B0591E226AEA21400F8D743 /* Main.storyboard */,
-				2B0591E526AEA21700F8D743 /* Assets.xcassets */,
-				2B0591E726AEA21700F8D743 /* LaunchScreen.storyboard */,
-				2B0591EA26AEA21700F8D743 /* LearniOSInHouse-Info.plist */,
-				2BEF0D5A2705B3840044F546 /* LearniOS-Info.plist */,
 				2B19E78E2704D3CE00200278 /* OCObject.h */,
 				2B19E78F2704D3CE00200278 /* OCObject.m */,
+				2B0591E226AEA21400F8D743 /* Main.storyboard */,
+				2B0591E726AEA21700F8D743 /* LaunchScreen.storyboard */,
+				2B0591E526AEA21700F8D743 /* Assets.xcassets */,
 				2B19E78B2704D3CC00200278 /* LearniOS-Bridging-Header.h */,
+				2B0591EA26AEA21700F8D743 /* LearniOSInHouse-Info.plist */,
+				2BEF0D5A2705B3840044F546 /* LearniOS-Info.plist */,
 			);
 			path = LearniOS;
 			sourceTree = "<group>";
@@ -472,9 +471,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B0591E126AEA21400F8D743 /* ViewController.swift in Sources */,
-				2B0591DD26AEA21400F8D743 /* AppDelegate.swift in Sources */,
-				2B0591DF26AEA21400F8D743 /* SceneDelegate.swift in Sources */,
+				2BD34751270755D20041C78E /* AppDelegate.swift in Sources */,
+				2BD34752270755D50041C78E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -990,7 +988,7 @@
 				2B3E8A9826B6AF51002BB32B /* LearniOSInHouseRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = LearniOSRelease;
+			defaultConfigurationName = LearniOSInHouseDebug;
 		};
 		2B05920326AEA21700F8D743 /* Build configuration list for PBXNativeTarget "LearniOS" */ = {
 			isa = XCConfigurationList;
@@ -1002,7 +1000,7 @@
 				2B3E8A9926B6AF51002BB32B /* LearniOSInHouseRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = LearniOSRelease;
+			defaultConfigurationName = LearniOSInHouseDebug;
 		};
 		2B05920626AEA21700F8D743 /* Build configuration list for PBXNativeTarget "LearniOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1014,7 +1012,7 @@
 				2B3E8A9A26B6AF51002BB32B /* LearniOSInHouseRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = LearniOSRelease;
+			defaultConfigurationName = LearniOSInHouseDebug;
 		};
 		2B3E8AC826B6DA02002BB32B /* Build configuration list for PBXNativeTarget "LearniOSInHouse" */ = {
 			isa = XCConfigurationList;
@@ -1026,7 +1024,7 @@
 				2B3E8ACD26B6DA02002BB32B /* LearniOSInHouseRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = LearniOSRelease;
+			defaultConfigurationName = LearniOSInHouseDebug;
 		};
 /* End XCConfigurationList section */
 	};

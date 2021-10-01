@@ -22,6 +22,7 @@
         NSMutableArray *abc = [NSMutableArray array];
         NSArray *a1 = @[abc];
         NSArray *a2 = [a1 copy];
+        NSArray *a3 = [[NSArray alloc] initWithArray:a1 copyItems:YES];
         [abc addObject:@"123"];
         NSLog(@"123");
     }

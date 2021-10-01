@@ -44,6 +44,7 @@ APP_NAME_LearniOS        = LearniOS
 APP_NAME_LearniOSInHouse = LearniOSInHouse
 APP_NAME = $(APP_NAME_$(CURRENT_TARGET))
 PRODUCT_NAME = $(APP_NAME)
+EXECUTABLE_NAME = $(APP_NAME)
 
 // 设置常用编译选项
 SDKROOT = iphoneos
@@ -67,3 +68,6 @@ CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES
 //EXPORTED_SYMBOLS_FILE = ${SRCROOT}/exportSymbols.txt
 
 SWIFT_VERSION = 5.0
+
+///Users/bytedance/Documents/Coding/self/playground/LearniOS/LearniOS/LearniOS-Bridging-Header.h
+SWIFT_OBJC_BRIDGING_HEADER = ${SRCROOT}/LearniOS/LearniOS-Bridging-Header.h
