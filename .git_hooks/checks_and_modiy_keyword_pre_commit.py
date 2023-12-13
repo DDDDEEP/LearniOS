@@ -48,8 +48,15 @@ for i in repo.index.diff("HEAD"):
             contents = f.read()
 
         new_contents = re.sub(r"\bzhongya\w*\.\w*\b", "DEEP", contents, flags=0)
-        new_contents = re.sub(r"\b{B|b}yte{D|d}a\w*\.", "DEEP.", new_contents, flags=0)
-        new_contents = re.sub(r"\b{B|b}{T|t}{D|d|P|p}", "DEP", new_contents, flags=0)
+        new_contents = re.sub(r"\b[Bb]yte[Dd]a\w*\.", "DEEP.", new_contents, flags=0)
+
+        def replace(match):
+            if match.group(0) == "btd":
+                return "dep"
+            else:
+                return "DEP"
+
+        new_contents = re.sub(r"\b(btd|BTD)", replace, new_contents, flags=0)
 
         # 如果有变化，就更新文件并重新 add 到 git
         if new_contents != contents:
