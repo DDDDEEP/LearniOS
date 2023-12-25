@@ -6,10 +6,10 @@
 require "xcodeproj"
 
 # ================== 定义常量 ==================
-COMMON_FOLDER = "Common"
-PROJECT_FILE_NAME = "LearniOS.xcodeproj"
+PROJECT_NAME = "LearniOS"
+PROJECT_FILE_NAME = "#{PROJECT_NAME}.xcodeproj"
 # 不希望编译的 Group
-IGNORE_GROUP_REGEX = ENV["ENABLE_FUNNY_CODE"].to_i ? /(\.xcassets|Funny)$/ : /\.xcassets$/
+IGNORE_GROUP_REGEX = ENV["ENABLE_PLAYGROUND_CODE"].to_i > 0 ? /\.xcassets$/ : /(\.xcassets|Playground)$/
 # 只加入到 Group 的文件
 FILE_REF_PATTERN = "*.{h,plist,entitlements}"
 # 加入到 Group，且作为 Complie Source 的文件
@@ -39,7 +39,7 @@ def GetFolderListForPath(root_path, path = "", include_root = true)
       # 移除路径开头的"/"
       relative_path = relative_path[0] == "/" ? relative_path[1..-1] : relative_path
       directories << File.join(File.basename(root_path), relative_path)
-      directories.concat(GetFolderListForPath(root_path, relative_path, false)) unless full_path.end_with?(".xcassets")
+      directories.concat(GetFolderListForPath(root_path, relative_path, false)) unless full_path =~ IGNORE_GROUP_REGEX
     end
   end
   directories
@@ -77,25 +77,36 @@ project_dir = ENV["PROJECT_DIR"] || "#{__dir__}/.."
 project_file_path = ENV["PROJECT_FILE_PATH"] || "#{project_dir}/#{PROJECT_FILE_NAME}"
 project = Xcodeproj::Project.open(project_file_path)
 
-common_group_path = "#{project_dir}/#{COMMON_FOLDER}"
-common_complie_source, common_bundle_resources = ParseGroupRefForFolder(common_group_path, project.main_group)
+ProjectTarget = Struct.new(:target, :complie_source, :bundle_resources)
+normal_target = nil
+inhouse_target = nil
+test_target = nil
+project_targets = []
 
 project.targets.each do |target|
   target.source_build_phase.clear
   target.resources_build_phase.clear
 
-  target_name = target.name
-  target_group_path = "#{project_dir}/#{target_name}"
-  target_complie_source, target_bundle_resources = ParseGroupRefForFolder(target_group_path, project.main_group)
-
-  if !target_name.end_with?("Tests")
-    # 测试 target 不需要 Common 里的文件
-    target_complie_source.concat(common_complie_source)
-    target_bundle_resources.concat(common_bundle_resources)
+  target_ref = ProjectTarget.new(target, [], [])
+  if target.name == "#{PROJECT_NAME}"
+    normal_target = target_ref
+  elsif target.name == "#{PROJECT_NAME}InHouse"
+    inhouse_target = target_ref
+  elsif target.name.end_with?("Tests")
+    test_target = target_ref
   end
+  target_group_path = "#{project_dir}/#{target.name}"
+  target_ref.complie_source, target_ref.bundle_resources = ParseGroupRefForFolder(target_group_path, project.main_group)
 
-  target.add_file_references(target_complie_source)
-  target.add_resources(target_bundle_resources)
+  project_targets << target_ref
 end
+inhouse_target.complie_source.concat(normal_target.complie_source)
+inhouse_target.bundle_resources.concat(normal_target.bundle_resources)
+
+project_targets.each do |p_target|
+  p_target.target.add_file_references(p_target.complie_source)
+  p_target.target.add_resources(p_target.bundle_resources)
+end
+
 project.main_group.sort_by_type
 project.save
