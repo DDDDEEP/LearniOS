@@ -1,5 +1,5 @@
 //
-// HomeViewController.swift
+// MainViewController.swift
 // LearniOS
 //
 // Created by DEEP on 2023/12/7
@@ -8,11 +8,11 @@
         
 
 import UIKit
-import SnapKit
+//import SnapKit
 import BlocksKit
 
 
-class HomeViewController: UIViewController
+class MainViewController: UIViewController
 {
     override func viewDidLoad() {
         super.viewDidLoad()

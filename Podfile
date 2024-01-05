@@ -9,7 +9,7 @@ ENABLE_PLAYGROUND_CODE = 0
 #               Pods                  #
 #######################################
 
-ENV["ENABLE_PLAYGROUND_CODE"] = ENABLE_PLAYGROUND_CODE.to_s
+# 创建用户文件
 system("bundle exec ruby ./tools/handle_playground_bridge_header.rb")
 
 # Uncomment the next line to define a global platform for your project
@@ -19,24 +19,18 @@ platform :ios, "#{MIN_IOS_VERSION}"
 # Comment the next line if you don't want to use dynamic frameworks
 use_frameworks!
 
-project "LearniOS", "LearniOSDebug" => :debug, "LearniOSInHouseDebug" => :debug, "LearniOSInHouseTest" => :debug
+project "LearniOS", "LearniOSDebug" => :debug, "LearniOSRelease" => :release, "LearniOSInHouseDebug" => :debug, "LearniOSInHouseRelease" => :release, "LearniOSInHouseTest" => :debug
 
-def app
-  pod "KVOController", "~> 1.2.0"
-  #  pod 'BaiduMapKit', '~> 6.4.0'
-  pod "ReactiveCocoa"
-  pod "ReactiveObjC"
-  pod "Masonry"
-  pod "SnapKit"
-  pod "BlocksKit"
-  pod "Mantle"
-  #  pod 'Yoga'
-  #  pod 'YogaKit'
+def common_pods
+  pod "LearniOSCore", :modular_headers => true, :inhibit_warnings => false, :subspecs => ["Core"], :path => "./LearniOSCore/"
 end
 
-def debug_pods
-  pod "FLEX", "~> 4.4.1"
-  pod "LookinServer"
+def inhouse_pods
+  subspecs = ["InHouse"]
+  if ENABLE_PLAYGROUND_CODE > 0
+    subspecs << "Playground"
+  end
+  pod "LearniOSCore", :modular_headers => true, :inhibit_warnings => false, :subspecs => subspecs, :path => "./LearniOSCore/"
 end
 
 #######################################
@@ -44,17 +38,25 @@ end
 #######################################
 
 target "LearniOSInHouse" do
-  app
-  debug_pods
+  common_pods
+  inhouse_pods
 end
 
 target "LearniOS" do
-  app
+  common_pods
 end
 
 target "LearniOSTests" do
-  app
+  common_pods
 end
+
+#def append_header_search_path(target, path)
+#  target.build_configurations.each do |config|
+#    # Note that there's a space character after `$(inherited)`.
+#    config.build_settings["HEADER_SEARCH_PATHS"] ||= "$(inherited) "
+#    config.build_settings["HEADER_SEARCH_PATHS"] << path
+#  end
+#end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
@@ -62,8 +64,10 @@ post_install do |installer|
       if config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"].to_f < MIN_IOS_VERSION
         config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "#{MIN_IOS_VERSION}"
       end
+#      config.build_settings["USER_HEADER_SEARCH_PATHS"] ||= "${PROJECT_DIR}/LearniOSCore/**/* "
+#      config.build_settings["USER_HEADER_SEARCH_PATHS"] << ""
     end
   end
 
-  system("bundle exec ruby ./tools/merge_complie_sources.rb")
+  # system("bundle exec ruby ./tools/merge_complie_sources.rb")
 end

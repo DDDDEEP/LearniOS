@@ -7,30 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C296AEAD922B4F33FA844A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5AE900EB5D255403E4668E /* AppDelegate.swift */; };
-		1BAD7C55058A2148F1A9AE5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E9AF3C38B48349D3BB92323 /* Assets.xcassets */; };
-		1FF1BCA37B36A156BE78F3B1 /* MethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A0980F95C896BD69E5E727 /* MethodTrace.m */; };
-		358765520963EC0DA39395DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5AE900EB5D255403E4668E /* AppDelegate.swift */; };
-		396AFE4C697D6BAAED01957A /* DebugToolService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A34E0942B97AF76A6C6C4C5 /* DebugToolService.m */; };
-		3C16DF723B09965FD0F05CD3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90373264DF4C2316517CF7 /* HomeViewController.swift */; };
-		4042A8F61F663225A013765B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E9AF3C38B48349D3BB92323 /* Assets.xcassets */; };
-		425B13744D2510DB0B310C57 /* MethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A0980F95C896BD69E5E727 /* MethodTrace.m */; };
-		4DE5DF65E295994FD6261891 /* ANYMethodLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BD5DF66ED00C591C0A77A1 /* ANYMethodLog.m */; };
-		71FB2C2C3E8AD3BBF7F59661 /* ANYMethodLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BD5DF66ED00C591C0A77A1 /* ANYMethodLog.m */; };
-		805D70FD2F66ABE708AD8905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF2CA0D9D372A12463A3E5D /* Main.storyboard */; };
-		81B585470FA52D6F825B9E30 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6061F5D5ADD83A057092853D /* HomeTabBarViewController.swift */; };
-		9406117E4315F3F42DDA88C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF2CA0D9D372A12463A3E5D /* Main.storyboard */; };
-		94B4722031B80DA1E205A180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D474A29BB2482409BF23C22 /* LaunchScreen.storyboard */; };
-		A6A1680CBDB90199B23013F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F745A135C54D8B0156371CB /* SceneDelegate.swift */; };
-		ACC8CF977CB84CCDBE86B2BF /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6061F5D5ADD83A057092853D /* HomeTabBarViewController.swift */; };
+		0CB0113C50425383E40BC705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A0AF38D9ACE79C776EA4C7 /* Assets.xcassets */; };
+		2BA3C6342B3C4CB0007E8B36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3C6332B3C4CB0007E8B36 /* main.m */; };
+		2BA3C6352B3C4CB0007E8B36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3C6332B3C4CB0007E8B36 /* main.m */; };
+		2BD6CBCD2B3DB64E002DB087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD6CBCC2B3DB64E002DB087 /* LaunchScreen.storyboard */; };
+		2BD6CBCE2B3DB64E002DB087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD6CBCC2B3DB64E002DB087 /* LaunchScreen.storyboard */; };
+		94D9ADC89AD33D83FE625FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A0AF38D9ACE79C776EA4C7 /* Assets.xcassets */; };
+		AE845F80B0BBB1164AC347B3 /* LearniOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B430C13236814C2E6DD72 /* LearniOSTests.swift */; };
 		B4E363DDDB4D1D0A44DC9F7E /* Pods_LearniOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC4980C9B84F8E8A99314FA /* Pods_LearniOS.framework */; };
-		BC644517E8A39C12382B4C69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D474A29BB2482409BF23C22 /* LaunchScreen.storyboard */; };
 		C21EA519D3376516EB39011F /* Pods_LearniOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF65F9958F2B162768ADABF /* Pods_LearniOSTests.framework */; };
 		D95977048CAE2B842317C81F /* Pods_LearniOSInHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B168B2B84FCE378F2D753F12 /* Pods_LearniOSInHouse.framework */; };
-		DA6882B4AB4E736B302C4BC1 /* LearniOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8834450D43D3B325877780F /* LearniOSTests.swift */; };
-		EF16495B3A484BEFC5C05FA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F745A135C54D8B0156371CB /* SceneDelegate.swift */; };
-		F940D042179E6805CA3E327A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90373264DF4C2316517CF7 /* HomeViewController.swift */; };
-		FCBBEB0DF5EF7DDE4C67B158 /* DebugToolService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A34E0942B97AF76A6C6C4C5 /* DebugToolService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		039A3ED0163C38665D7AD8DD /* Pods-LearniOSTests.learniosinhousetest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSTests.learniosinhousetest.xcconfig"; path = "Target Support Files/Pods-LearniOSTests/Pods-LearniOSTests.learniosinhousetest.xcconfig"; sourceTree = "<group>"; };
-		0E9AF3C38B48349D3BB92323 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DAF6A396033DE66B4BEB5A3 /* LearniOS.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = LearniOS.plist; sourceTree = "<group>"; };
 		2B0591D926AEA21400F8D743 /* LearniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0591EF26AEA21700F8D743 /* LearniOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearniOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3E8ACE26B6DA02002BB32B /* LearniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,52 +39,35 @@
 		2B69BDF22B244CE70026C6BC /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		2B69BDF32B244CE70026C6BC /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		2B69BDF42B244CE70026C6BC /* user.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = user.xcconfig; sourceTree = "<group>"; };
-		33138978C45D37383FD0B312 /* ANYMethodLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANYMethodLog.h; path = Utils/DebugTool/MethodTrace/ANYMethodLog.h; sourceTree = "<group>"; };
-		3874BE791445E76F27B8700B /* LearniOSInHouse-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LearniOSInHouse-Bridging-Header.h"; sourceTree = "<group>"; };
+		2BA3C6332B3C4CB0007E8B36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BD6CBCC2B3DB64E002DB087 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A5B430C13236814C2E6DD72 /* LearniOSTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearniOSTests.swift; sourceTree = "<group>"; };
 		416C2151878E9628030FFF07 /* Pods-LearniOSTests.learniosrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSTests.learniosrelease.xcconfig"; path = "Target Support Files/Pods-LearniOSTests/Pods-LearniOSTests.learniosrelease.xcconfig"; sourceTree = "<group>"; };
-		41D767CB9993BD4F68A43232 /* DebugToolService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DebugToolService.h; path = Utils/DebugTool/DebugToolService.h; sourceTree = "<group>"; };
-		41F23481F4496FD1049820E6 /* LearniOS-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LearniOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		43AFB9B8CFF82819838FFBDB /* MethodTrace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MethodTrace.h; path = Utils/DebugTool/MethodTrace/MethodTrace.h; sourceTree = "<group>"; };
 		4AF2251846C9A03264D55277 /* Pods-LearniOSInHouse.learniosinhousedebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSInHouse.learniosinhousedebug.xcconfig"; path = "Target Support Files/Pods-LearniOSInHouse/Pods-LearniOSInHouse.learniosinhousedebug.xcconfig"; sourceTree = "<group>"; };
-		4EF2CA0D9D372A12463A3E5D /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Homepage/Main.storyboard; sourceTree = "<group>"; };
-		54A0980F95C896BD69E5E727 /* MethodTrace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MethodTrace.m; path = Utils/DebugTool/MethodTrace/MethodTrace.m; sourceTree = "<group>"; };
 		5563D417E58DF79C76F5FEBB /* Pods_LearniOS_LearniOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearniOS_LearniOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		562E96309B23ABC91087B884 /* Pods-LearniOS.learniosinhouserelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOS.learniosinhouserelease.xcconfig"; path = "Target Support Files/Pods-LearniOS/Pods-LearniOS.learniosinhouserelease.xcconfig"; sourceTree = "<group>"; };
-		5A34E0942B97AF76A6C6C4C5 /* DebugToolService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DebugToolService.m; path = Utils/DebugTool/DebugToolService.m; sourceTree = "<group>"; };
-		5A90373264DF4C2316517CF7 /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Homepage/HomeViewController.swift; sourceTree = "<group>"; };
-		6061F5D5ADD83A057092853D /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeTabBarViewController.swift; path = Homepage/HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		63829B5202DFD7561581DD21 /* Pods-LearniOSInHouse.learniosdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSInHouse.learniosdebug.xcconfig"; path = "Target Support Files/Pods-LearniOSInHouse/Pods-LearniOSInHouse.learniosdebug.xcconfig"; sourceTree = "<group>"; };
-		6A360A02E18975A4B2CC4DB2 /* MethodTrace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MethodTrace.m; path = Utils/DebugTool/MethodTrace/MethodTrace.m; sourceTree = "<group>"; };
-		6C5AE900EB5D255403E4668E /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Homepage/AppDelegate.swift; sourceTree = "<group>"; };
 		6C770087E1C1FF2804CC538B /* Pods-LearniOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOS.debug.xcconfig"; path = "Target Support Files/Pods-LearniOS/Pods-LearniOS.debug.xcconfig"; sourceTree = "<group>"; };
-		6D474A29BB2482409BF23C22 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Homepage/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		71BD5DF66ED00C591C0A77A1 /* ANYMethodLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ANYMethodLog.m; path = Utils/DebugTool/MethodTrace/ANYMethodLog.m; sourceTree = "<group>"; };
 		73335E1363D6AFB14FA99DE3 /* Pods-LearniOS-LearniOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOS-LearniOSUITests.release.xcconfig"; path = "Target Support Files/Pods-LearniOS-LearniOSUITests/Pods-LearniOS-LearniOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		79CECD369F00E94CB24F31CE /* Pods-LearniOSInHouse.learniosinhousetest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSInHouse.learniosinhousetest.xcconfig"; path = "Target Support Files/Pods-LearniOSInHouse/Pods-LearniOSInHouse.learniosinhousetest.xcconfig"; sourceTree = "<group>"; };
-		7F745A135C54D8B0156371CB /* SceneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = Homepage/SceneDelegate.swift; sourceTree = "<group>"; };
 		85F4B654FC23A8ECFFD57DF2 /* Pods-LearniOSInHouse.learniosinhouserelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSInHouse.learniosinhouserelease.xcconfig"; path = "Target Support Files/Pods-LearniOSInHouse/Pods-LearniOSInHouse.learniosinhouserelease.xcconfig"; sourceTree = "<group>"; };
 		8FA87B25C98E3D808CC90231 /* Pods-LearniOSTests.learniosinhouserelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSTests.learniosinhouserelease.xcconfig"; path = "Target Support Files/Pods-LearniOSTests/Pods-LearniOSTests.learniosinhouserelease.xcconfig"; sourceTree = "<group>"; };
-		9BAA156A7861B7E7035DE2C1 /* DebugToolService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DebugToolService.m; path = Utils/DebugTool/DebugToolService.m; sourceTree = "<group>"; };
 		9BAFB3F13287B174AB300EDF /* Pods-LearniOSTests.learniosinhousedebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSTests.learniosinhousedebug.xcconfig"; path = "Target Support Files/Pods-LearniOSTests/Pods-LearniOSTests.learniosinhousedebug.xcconfig"; sourceTree = "<group>"; };
-		9FA924C987A63F6D23EDFF65 /* LearniOS.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = LearniOS.entitlements; sourceTree = "<group>"; };
-		9FC0D51C18A4862D0D4FC952 /* ANYMethodLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANYMethodLog.h; path = Utils/DebugTool/MethodTrace/ANYMethodLog.h; sourceTree = "<group>"; };
 		A5DC14990812F673B4A4B825 /* Pods-LearniOS.learniosrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOS.learniosrelease.xcconfig"; path = "Target Support Files/Pods-LearniOS/Pods-LearniOS.learniosrelease.xcconfig"; sourceTree = "<group>"; };
-		A5EB5A19C5D9CA423C330F34 /* MethodTrace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MethodTrace.h; path = Utils/DebugTool/MethodTrace/MethodTrace.h; sourceTree = "<group>"; };
+		AB1F44B0F1249D21B9782778 /* LearniOS-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LearniOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		ADC4980C9B84F8E8A99314FA /* Pods_LearniOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearniOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B168B2B84FCE378F2D753F12 /* Pods_LearniOSInHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearniOSInHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B395C5EE0DD8AACBD66658FA /* Pods-LearniOS-LearniOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOS-LearniOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-LearniOS-LearniOSUITests/Pods-LearniOS-LearniOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BD283F23C46201336EE70FBA /* DebugToolService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DebugToolService.h; path = Utils/DebugTool/DebugToolService.h; sourceTree = "<group>"; };
 		BEDDE91427FA345DACA51D8D /* Pods-LearniOS.learniosdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOS.learniosdebug.xcconfig"; path = "Target Support Files/Pods-LearniOS/Pods-LearniOS.learniosdebug.xcconfig"; sourceTree = "<group>"; };
 		CA094CE57F4E61DA8D54A9B5 /* Pods-LearniOS.learniosinhousetest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOS.learniosinhousetest.xcconfig"; path = "Target Support Files/Pods-LearniOS/Pods-LearniOS.learniosinhousetest.xcconfig"; sourceTree = "<group>"; };
 		CB19CA8DD4B9AB781408ED5F /* Pods-LearniOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSTests.debug.xcconfig"; path = "Target Support Files/Pods-LearniOSTests/Pods-LearniOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD6F869884F915573F59E467 /* Pods-LearniOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOS.release.xcconfig"; path = "Target Support Files/Pods-LearniOS/Pods-LearniOS.release.xcconfig"; sourceTree = "<group>"; };
 		CEF65F9958F2B162768ADABF /* Pods_LearniOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearniOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6A0AF38D9ACE79C776EA4C7 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDB2E75278B68CF0957F6A37 /* LearniOS.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = LearniOS.entitlements; sourceTree = "<group>"; };
 		E06B1AD6E9CA6CA10FDDD31F /* Pods-LearniOSTests.learniosdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSTests.learniosdebug.xcconfig"; path = "Target Support Files/Pods-LearniOSTests/Pods-LearniOSTests.learniosdebug.xcconfig"; sourceTree = "<group>"; };
 		E337587712A734EB8F6E9CA1 /* Pods-LearniOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSTests.release.xcconfig"; path = "Target Support Files/Pods-LearniOSTests/Pods-LearniOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		E3CBC4759AAE7E949BB3E923 /* LearniOS.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = LearniOS.plist; sourceTree = "<group>"; };
-		E8834450D43D3B325877780F /* LearniOSTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LearniOSTests.swift; sourceTree = "<group>"; };
 		EA893023571A0A386570FD6F /* Pods-LearniOSInHouse.learniosrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOSInHouse.learniosrelease.xcconfig"; path = "Target Support Files/Pods-LearniOSInHouse/Pods-LearniOSInHouse.learniosrelease.xcconfig"; sourceTree = "<group>"; };
-		EAFB4059B386A6C47FB9A21D /* ANYMethodLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ANYMethodLog.m; path = Utils/DebugTool/MethodTrace/ANYMethodLog.m; sourceTree = "<group>"; };
 		F6714B37E098384A9FA2165B /* Pods-LearniOS.learniosinhousedebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearniOS.learniosinhousedebug.xcconfig"; path = "Target Support Files/Pods-LearniOS/Pods-LearniOS.learniosinhousedebug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,7 +105,6 @@
 				2B69BDF02B244CE70026C6BC /* Configuration */,
 				4FF1C94C2B9D536E478E795F /* Frameworks */,
 				2B0591DB26AEA21400F8D743 /* LearniOS */,
-				2B69BDAB2B244B4E0026C6BC /* LearniOSInHouse */,
 				2B0591F226AEA21700F8D743 /* LearniOSTests */,
 				DDCD70D39B131419319558EA /* Pods */,
 				2B0591DA26AEA21400F8D743 /* Products */,
@@ -156,13 +124,12 @@
 		2B0591DB26AEA21400F8D743 /* LearniOS */ = {
 			isa = PBXGroup;
 			children = (
-				0E9AF3C38B48349D3BB92323 /* Assets.xcassets */,
-				9FA924C987A63F6D23EDFF65 /* LearniOS.entitlements */,
-				E3CBC4759AAE7E949BB3E923 /* LearniOS.plist */,
-				41F23481F4496FD1049820E6 /* LearniOS-Bridging-Header.h */,
-				623DE2948D13F1EE370419F6 /* Homepage */,
-				AF3D97784EAB43AD2B22828C /* Utils */,
-				ADCF1E3930979676216253D3 /* Feature */,
+				D6A0AF38D9ACE79C776EA4C7 /* Assets.xcassets */,
+				2BD6CBCC2B3DB64E002DB087 /* LaunchScreen.storyboard */,
+				DDB2E75278B68CF0957F6A37 /* LearniOS.entitlements */,
+				0DAF6A396033DE66B4BEB5A3 /* LearniOS.plist */,
+				AB1F44B0F1249D21B9782778 /* LearniOS-Bridging-Header.h */,
+				2BA3C6332B3C4CB0007E8B36 /* main.m */,
 			);
 			path = LearniOS;
 			sourceTree = "<group>";
@@ -170,17 +137,9 @@
 		2B0591F226AEA21700F8D743 /* LearniOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8834450D43D3B325877780F /* LearniOSTests.swift */,
+				3A5B430C13236814C2E6DD72 /* LearniOSTests.swift */,
 			);
 			path = LearniOSTests;
-			sourceTree = "<group>";
-		};
-		2B69BDAB2B244B4E0026C6BC /* LearniOSInHouse */ = {
-			isa = PBXGroup;
-			children = (
-				3874BE791445E76F27B8700B /* LearniOSInHouse-Bridging-Header.h */,
-			);
-			path = LearniOSInHouse;
 			sourceTree = "<group>";
 		};
 		2B69BDF02B244CE70026C6BC /* Configuration */ = {
@@ -194,17 +153,6 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		497441EC74F879A693BBA0F9 /* MethodTrace */ = {
-			isa = PBXGroup;
-			children = (
-				9FC0D51C18A4862D0D4FC952 /* ANYMethodLog.h */,
-				EAFB4059B386A6C47FB9A21D /* ANYMethodLog.m */,
-				43AFB9B8CFF82819838FFBDB /* MethodTrace.h */,
-				6A360A02E18975A4B2CC4DB2 /* MethodTrace.m */,
-			);
-			name = MethodTrace;
-			sourceTree = "<group>";
-		};
 		4FF1C94C2B9D536E478E795F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,44 +162,6 @@
 				ADC4980C9B84F8E8A99314FA /* Pods_LearniOS.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5A70A9F03E31564390D5CFCF /* DebugTool */ = {
-			isa = PBXGroup;
-			children = (
-				BD283F23C46201336EE70FBA /* DebugToolService.h */,
-				5A34E0942B97AF76A6C6C4C5 /* DebugToolService.m */,
-				E8C6A80729BA6B05FBD6F0CF /* MethodTrace */,
-			);
-			name = DebugTool;
-			sourceTree = "<group>";
-		};
-		623DE2948D13F1EE370419F6 /* Homepage */ = {
-			isa = PBXGroup;
-			children = (
-				6C5AE900EB5D255403E4668E /* AppDelegate.swift */,
-				6061F5D5ADD83A057092853D /* HomeTabBarViewController.swift */,
-				5A90373264DF4C2316517CF7 /* HomeViewController.swift */,
-				6D474A29BB2482409BF23C22 /* LaunchScreen.storyboard */,
-				4EF2CA0D9D372A12463A3E5D /* Main.storyboard */,
-				7F745A135C54D8B0156371CB /* SceneDelegate.swift */,
-			);
-			name = Homepage;
-			sourceTree = "<group>";
-		};
-		ADCF1E3930979676216253D3 /* Feature */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Feature;
-			sourceTree = "<group>";
-		};
-		AF3D97784EAB43AD2B22828C /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				5A70A9F03E31564390D5CFCF /* DebugTool */,
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 		DDCD70D39B131419319558EA /* Pods */ = {
@@ -280,17 +190,6 @@
 				8FA87B25C98E3D808CC90231 /* Pods-LearniOSTests.learniosinhouserelease.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		E8C6A80729BA6B05FBD6F0CF /* MethodTrace */ = {
-			isa = PBXGroup;
-			children = (
-				33138978C45D37383FD0B312 /* ANYMethodLog.h */,
-				71BD5DF66ED00C591C0A77A1 /* ANYMethodLog.m */,
-				A5EB5A19C5D9CA423C330F34 /* MethodTrace.h */,
-				54A0980F95C896BD69E5E727 /* MethodTrace.m */,
-			);
-			name = MethodTrace;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,9 +301,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4042A8F61F663225A013765B /* Assets.xcassets in Resources */,
-				94B4722031B80DA1E205A180 /* LaunchScreen.storyboard in Resources */,
-				805D70FD2F66ABE708AD8905 /* Main.storyboard in Resources */,
+				94D9ADC89AD33D83FE625FCC /* Assets.xcassets in Resources */,
+				2BD6CBCE2B3DB64E002DB087 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,9 +317,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BAD7C55058A2148F1A9AE5E /* Assets.xcassets in Resources */,
-				BC644517E8A39C12382B4C69 /* LaunchScreen.storyboard in Resources */,
-				9406117E4315F3F42DDA88C9 /* Main.storyboard in Resources */,
+				0CB0113C50425383E40BC705 /* Assets.xcassets in Resources */,
+				2BD6CBCD2B3DB64E002DB087 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,13 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C16DF723B09965FD0F05CD3 /* HomeViewController.swift in Sources */,
-				358765520963EC0DA39395DE /* AppDelegate.swift in Sources */,
-				ACC8CF977CB84CCDBE86B2BF /* HomeTabBarViewController.swift in Sources */,
-				A6A1680CBDB90199B23013F9 /* SceneDelegate.swift in Sources */,
-				396AFE4C697D6BAAED01957A /* DebugToolService.m in Sources */,
-				1FF1BCA37B36A156BE78F3B1 /* MethodTrace.m in Sources */,
-				4DE5DF65E295994FD6261891 /* ANYMethodLog.m in Sources */,
+				2BA3C6352B3C4CB0007E8B36 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA6882B4AB4E736B302C4BC1 /* LearniOSTests.swift in Sources */,
+				AE845F80B0BBB1164AC347B3 /* LearniOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,13 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F940D042179E6805CA3E327A /* HomeViewController.swift in Sources */,
-				0C296AEAD922B4F33FA844A9 /* AppDelegate.swift in Sources */,
-				81B585470FA52D6F825B9E30 /* HomeTabBarViewController.swift in Sources */,
-				EF16495B3A484BEFC5C05FA0 /* SceneDelegate.swift in Sources */,
-				FCBBEB0DF5EF7DDE4C67B158 /* DebugToolService.m in Sources */,
-				425B13744D2510DB0B310C57 /* MethodTrace.m in Sources */,
-				71FB2C2C3E8AD3BBF7F59661 /* ANYMethodLog.m in Sources */,
+				2BA3C6342B3C4CB0007E8B36 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,7 +556,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
-				INFOPLIST_FILE = "$(SRCROOT)/Common/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -680,7 +564,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DEEP.LearniOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -699,7 +582,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
-				INFOPLIST_FILE = "$(SRCROOT)/Common/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -708,7 +590,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DEEP.LearniOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -814,7 +695,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
-				INFOPLIST_FILE = "$(SRCROOT)/Common/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -822,7 +702,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -900,7 +779,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
-				INFOPLIST_FILE = "$(SRCROOT)/Common/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -909,7 +787,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DEEP.LearniOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -986,7 +863,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
-				INFOPLIST_FILE = "$(SRCROOT)/Common/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -994,7 +870,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1036,13 +911,13 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1057,11 +932,11 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1076,6 +951,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
 				ENABLE_TESTABILITY = YES;
@@ -1084,7 +960,6 @@
 				LD_GENERATE_MAP_FILE = NO;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1099,11 +974,11 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1118,11 +993,11 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BT7ZL9CGHA;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

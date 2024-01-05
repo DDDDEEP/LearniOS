@@ -102,5 +102,5 @@ node_modules/
 1
 
 Configuration/user.xcconfig
-LearniOSInHouse/Playground/*
-!LearniOSInHouse/Playground/Playground-Bridging-Header.h.default
+LearniOSCore/Playground/*
+!LearniOSCore/Playground/Playground-Bridging-Header.h

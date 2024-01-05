@@ -9,7 +9,8 @@ require "xcodeproj"
 PROJECT_NAME = "LearniOS"
 PROJECT_FILE_NAME = "#{PROJECT_NAME}.xcodeproj"
 # 不希望编译的 Group
-IGNORE_GROUP_REGEX = ENV["ENABLE_PLAYGROUND_CODE"].to_i > 0 ? /\.xcassets$/ : /(\.xcassets|Playground)$/
+# IGNORE_GROUP_REGEX = ENV["ENABLE_PLAYGROUND_CODE"].to_i > 0 ? /\.xcassets$/ : /(\.xcassets|Playground)$/
+IGNORE_GROUP_REGEX = 1 > 0 ? /\.xcassets$/ : /(\.xcassets|Playground)$/
 # 只加入到 Group 的文件
 FILE_REF_PATTERN = "*.{h,plist,entitlements}"
 # 加入到 Group，且作为 Complie Source 的文件
