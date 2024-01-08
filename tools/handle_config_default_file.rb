@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 # =======================================================
-# == 根据是否启用 Playground，生成相应的 bridge-header 文件 ==
+# ==           拷贝所有的 xxx.default 文件               ==
 # =======================================================
 
 require "fileutils"
@@ -10,13 +10,21 @@ project_dir = ENV["PROJECT_DIR"] || "#{__dir__}/.."
 PLAYGROUND_HEADER_NAME = "Playground-Bridging-Header.h"
 PLAYGROUND_HEADER_PATH = "#{project_dir}/LearniOSCore/Playground/#{PLAYGROUND_HEADER_NAME}"
 PLAYGROUND_HEADER_DEFAULT_PATH = "#{PLAYGROUND_HEADER_PATH}.default"
+
 USER_CONFIG_PATH = "#{project_dir}/Configuration/user.xcconfig"
 USER_CONFIG_DEFAULT_PATH = "#{USER_CONFIG_PATH}.default"
+
+CONFIG_PATH = "#{project_dir}/config.rb"
+CONFIG_DEFAULT_PATH = "#{CONFIG_PATH}.default"
+
 if !File.exist?(PLAYGROUND_HEADER_PATH)
   FileUtils.cp(PLAYGROUND_HEADER_DEFAULT_PATH, PLAYGROUND_HEADER_PATH)
 end
 if !File.exist?(USER_CONFIG_PATH)
   FileUtils.cp(USER_CONFIG_DEFAULT_PATH, USER_CONFIG_PATH)
+end
+if !File.exist?(CONFIG_PATH)
+  FileUtils.cp(CONFIG_DEFAULT_PATH, CONFIG_PATH)
 end
 
 # ================== 开启 Playground 功能（已废弃） ==================

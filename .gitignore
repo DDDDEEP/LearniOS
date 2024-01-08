@@ -102,5 +102,6 @@ node_modules/
 1
 
 Configuration/user.xcconfig
+config.rb
 LearniOSCore/Playground/*
 !LearniOSCore/Playground/Playground-Bridging-Header.h

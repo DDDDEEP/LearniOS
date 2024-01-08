@@ -1,16 +1,23 @@
 #source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 
 #######################################
-#               Envs                  #
+#               Custom                #
 #######################################
-ENABLE_PLAYGROUND_CODE = 0
+# 创建用户文件
+puts "================== Handle Config Default File BEGIN =================="
+system("bundle exec ruby ./tools/handle_config_default_file.rb")
+puts "================== Handle Config Default File END =================="
+puts ""
+
+puts "================== User Config BEGIN =================="
+require "./config.rb"
+puts "ENABLE_PLAYGROUND_CODE=#{ENABLE_PLAYGROUND_CODE}"
+puts "================== User Config END =================="
+puts ""
 
 #######################################
 #               Pods                  #
 #######################################
-
-# 创建用户文件
-system("bundle exec ruby ./tools/handle_playground_bridge_header.rb")
 
 # Uncomment the next line to define a global platform for your project
 MIN_IOS_VERSION = 12.0
@@ -64,8 +71,8 @@ post_install do |installer|
       if config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"].to_f < MIN_IOS_VERSION
         config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "#{MIN_IOS_VERSION}"
       end
-#      config.build_settings["USER_HEADER_SEARCH_PATHS"] ||= "${PROJECT_DIR}/LearniOSCore/**/* "
-#      config.build_settings["USER_HEADER_SEARCH_PATHS"] << ""
+      #      config.build_settings["USER_HEADER_SEARCH_PATHS"] ||= "${PROJECT_DIR}/LearniOSCore/**/* "
+      #      config.build_settings["USER_HEADER_SEARCH_PATHS"] << ""
     end
   end
 
