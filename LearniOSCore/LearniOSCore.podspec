@@ -26,7 +26,7 @@ DESC
     "CLANG_CXX_LIBRARY" => "libc++",
   }
   s.xcconfig = {
-    "USER_HEADER_SEARCH_PATHS" => '"${PODS_TARGET_SRCROOT}/**/**/*.{h, hpp}"',
+    "USER_HEADER_SEARCH_PATHS" => '"${PODS_TARGET_SRCROOT}/**/**/*.{h,hpp}"',
   }
 
   # ---------------- dependency ----------------
