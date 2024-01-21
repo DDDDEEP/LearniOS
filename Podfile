@@ -29,6 +29,7 @@ use_frameworks!
 project "LearniOS", "LearniOSDebug" => :debug, "LearniOSRelease" => :release, "LearniOSInHouseDebug" => :debug, "LearniOSInHouseRelease" => :release, "LearniOSInHouseTest" => :debug
 
 def common_pods
+  pod 'YYKit', git: 'https://github.com/xiaoerlong/YYKit.git'
   pod "LearniOSCore", :modular_headers => true, :inhibit_warnings => false, :subspecs => ["Core"], :path => "./LearniOSCore/"
 end
 

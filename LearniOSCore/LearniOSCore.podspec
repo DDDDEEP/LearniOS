@@ -37,6 +37,7 @@ DESC
   s.dependency "SnapKit"
   s.dependency "BlocksKit"
   s.dependency "Mantle"
+  s.dependency "YYKit"
 
   # ---------------- subspec ----------------
   s.subspec "Utils" do |ss|
