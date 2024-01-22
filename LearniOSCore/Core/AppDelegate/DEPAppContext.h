@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class DEPBootAppDelegate;
+@class DEPInMainBootAppDelegate;
 
 #pragma mark - Sub Context Class
 
@@ -29,7 +29,7 @@
 
 @property (nonatomic, copy, readonly, nullable) NSDictionary *launchOptions;
 @property (nonatomic, strong, readonly, nullable) UIApplication *application;
-@property (nonatomic, strong, readonly, nullable) DEPBootAppDelegate *appDelegate;
+@property (nonatomic, strong, readonly, nullable) DEPInMainBootAppDelegate *appDelegate;
 @property (nonatomic, strong, readonly, nullable) DEPAppOpenURLContext *urlContext;
 //notificationContext;
 //userActivityContext;

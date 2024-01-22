@@ -1,5 +1,5 @@
 //
-// DEPBootTask.h
+// DEPInMainBootTask.h
 // Pods
 //
 // Created by DEEP on 2023/12/28
@@ -11,19 +11,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol DEPBootTaskProtocol
+@protocol DEPInMainBootTaskProtocol
 
 + (void)execute;
 
 @end
 
-typedef Class<DEPBootTaskProtocol> DEPBootTask;
+typedef Class<DEPInMainBootTaskProtocol> DEPInMainBootTask;
 
-@interface DEPBootTaskList : NSObject
+@interface DEPInMainBootTaskList : NSObject
 
 - (void)addTaskByName:(NSString *)taskName;
 
-- (NSArray<DEPBootTask> *)tasks;
+- (NSArray<DEPInMainBootTask> *)tasks;
 
 @end
 

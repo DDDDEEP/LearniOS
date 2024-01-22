@@ -1,5 +1,5 @@
 //
-// DEPBootAppDelegate.m
+// DEPInMainBootAppDelegate.m
 // LearniOSCore
 //
 // Created by DEEP on 2023/12/5
@@ -7,10 +7,10 @@
 //
         
 
-#import "DEPBootAppDelegate.h"
+#import "DEPInMainBootAppDelegate.h"
 #import "DEPAppContext.h"
-#import "DEPBootLoaderManager.h"
-#import "DEPBootTask.h"
+#import "DEPInMainBootManager.h"
+#import "DEPInMainBootTask.h"
 
 #pragma mark - DEPAppContext
 
@@ -32,7 +32,7 @@
 
 @property (nonatomic, copy, readwrite, nullable) NSDictionary *launchOptions;
 @property (nonatomic, strong, readwrite, nullable) UIApplication *application;
-@property (nonatomic, strong, readwrite, nullable) DEPBootAppDelegate *appDelegate;
+@property (nonatomic, strong, readwrite, nullable) DEPInMainBootAppDelegate *appDelegate;
 @property (nonatomic, strong, readwrite, nullable) DEPAppOpenURLContext *urlContext;
 @property (nonatomic, assign, readwrite) BOOL isInForeground;
 
@@ -59,13 +59,13 @@ extern inline DEPAppContext * DEPCurrentAppContext(void)
 
 
 
-#pragma mark - DEPBootAppDelegate
+#pragma mark - DEPInMainBootAppDelegate
 
-@interface DEPBootAppDelegate ()
+@interface DEPInMainBootAppDelegate ()
 
 @end
 
-@implementation DEPBootAppDelegate
+@implementation DEPInMainBootAppDelegate
 @synthesize supportOrientation = _supportOrientation;
 
 - (instancetype)init
@@ -90,10 +90,12 @@ extern inline DEPAppContext * DEPCurrentAppContext(void)
     DEPCurrentAppContext().appDelegate = self;
     DEPCurrentAppContext().launchOptions = launchOptions;
     
-    DEPBootTaskList *taskList = [[DEPBootTaskList alloc] init]; {
+    // 由主模块控制其他模块的加载任务，保证启动流程的维护性
+    DEPInMainBootTaskList *taskList = [[DEPInMainBootTaskList alloc] init]; {
         [taskList addTaskByName:@"DEPMainWindowInitTask"];
+//        [taskList addTaskByName:@"DEPRouterInitTask"];
     }
-    [[DEPBootLoaderManager sharedManager] bootWifhTaskList:taskList];
+    [[DEPInMainBootManager sharedManager] bootWifhTaskList:taskList];
     
     return YES;
 }

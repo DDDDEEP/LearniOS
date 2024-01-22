@@ -31,6 +31,7 @@ project "LearniOS", "LearniOSDebug" => :debug, "LearniOSRelease" => :release, "L
 def common_pods
   pod 'YYKit', git: 'https://github.com/xiaoerlong/YYKit.git'
   pod "LearniOSCore", :modular_headers => true, :inhibit_warnings => false, :subspecs => ["Core"], :path => "./LearniOSCore/"
+#  pod "LearniOSCore", :modular_headers => true, :inhibit_warnings => false, :subspecs => ["Core"], :path => "./LearniOSCore/"
 end
 
 def inhouse_pods
@@ -39,6 +40,7 @@ def inhouse_pods
     subspecs << "Playground"
   end
   pod "LearniOSCore", :modular_headers => true, :inhibit_warnings => false, :subspecs => subspecs, :path => "./LearniOSCore/"
+#  pod "LearniOSCore", :modular_headers => true, :inhibit_warnings => false, :subspecs => subspecs, :path => "./LearniOSCore/"
 end
 
 #######################################
@@ -72,6 +74,7 @@ post_install do |installer|
       if config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"].to_f < MIN_IOS_VERSION
         config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "#{MIN_IOS_VERSION}"
       end
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'GLES_SILENCE_DEPRECATION=1']
       #      config.build_settings["USER_HEADER_SEARCH_PATHS"] ||= "${PROJECT_DIR}/LearniOSCore/**/* "
       #      config.build_settings["USER_HEADER_SEARCH_PATHS"] << ""
     end

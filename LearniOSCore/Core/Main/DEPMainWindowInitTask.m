@@ -9,7 +9,7 @@
 
 #import "DEPMainWindowInitTask.h"
 #import "DEPAppContext.h"
-#import "DEPBootAppDelegate.h"
+#import "DEPInMainBootAppDelegate.h"
 #import <LearniOSCore/LearniOSCore-Swift.h>
 #import <SnapKit/SnapKit-Swift.h>
 

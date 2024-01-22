@@ -26,7 +26,13 @@ DESC
     "CLANG_CXX_LIBRARY" => "libc++",
   }
   s.xcconfig = {
-    "USER_HEADER_SEARCH_PATHS" => '"${PODS_TARGET_SRCROOT}/**/**/*.{h,hpp}"',
+#    "HEADER_SEARCH_PATHS" => '"${PODS_CONFIGURATION_BUILD_DIR}/${TARGET_NAME}/${PUBLIC_HEADERS_FOLDER_PATH}"',
+#    "USER_HEADER_SEARCH_PATHS" => '"${PODS_CONFIGURATION_BUILD_DIR}/${TARGET_NAME}/${PUBLIC_HEADERS_FOLDER_PATH}"',
+#    "USER_HEADER_SEARCH_PATHS" => '${SRCROOT}/../LearniOSCore/**/*.{h,hpp}',
+#    "HEADER_SEARCH_PATHS" => '${SRCROOT}/../LearniOSCore/**/*.{h,hpp}',
+#    "USER_HEADER_SEARCH_PATHS" => '${PODS_CONFIGURATION_BUILD_DIR}/LearniOSCore-BusinessUtils-Core-InHouse-Playground-Utils/LearniOSCore.framework/Headers',
+#"HEADER_SEARCH_PATHS" => '"${PODS_TARGET_SRCROOT}/**/**/*.{h,hpp}"',
+#"USER_HEADER_SEARCH_PATHS" => '"${PODS_TARGET_SRCROOT}/**/**/*.{h,hpp}"',
   }
 
   # ---------------- dependency ----------------
@@ -38,15 +44,25 @@ DESC
   s.dependency "BlocksKit"
   s.dependency "Mantle"
   s.dependency "YYKit"
+  s.dependency "MGJRouter_Swift"
 
   # ---------------- subspec ----------------
+  # 通用方法
   s.subspec "Utils" do |ss|
     ss.source_files = "Utils/**/*.{h,m,mm,swift}"
     ss.public_header_files = "Utils/**/*.{h}"
   end
+  
+  # 与工程逻辑相关的通用方法
+  s.subspec "BusinessUtils" do |ss|
+    ss.dependency "LearniOSCore/Utils"
+    ss.source_files = "BusinessUtils/**/*.{h,m,mm,swift}"
+    ss.public_header_files = "BusinessUtils/**/*.{h}"
+  end
 
   s.subspec "Core" do |ss|
     ss.dependency "LearniOSCore/Utils"
+    ss.dependency "LearniOSCore/BusinessUtils"
     ss.source_files = "Core/**/*.{h,m,mm,swift}"
     ss.public_header_files = "Core/**/*.{h}"
   end

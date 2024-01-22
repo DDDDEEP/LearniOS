@@ -9,11 +9,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import <LearniOSCore/DEPBootTask.h>
+#import <LearniOSCore/DEPInMainBootTask.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DEPMainWindowInitTask : NSObject<DEPBootTaskProtocol>
+@interface DEPMainWindowInitTask : NSObject<DEPInMainBootTaskProtocol>
 
 @end
 

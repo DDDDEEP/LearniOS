@@ -1,5 +1,5 @@
 //
-// AppDelegate.h
+// DEPPreMainBootManager.h
 // LearniOSCore
 //
 // Created by DEEP on 2023/12/5
@@ -8,9 +8,10 @@
         
 
 #import <UIKit/UIKit.h>
-#import "DEPInMainBootAppDelegate.h"
 
-@interface AppDelegate : DEPInMainBootAppDelegate
+@class DEPInMainBootTaskList;
+
+/// 执行 after-main 的任务
+@interface DEPPreMainBootManager : NSObject
 
 @end
-

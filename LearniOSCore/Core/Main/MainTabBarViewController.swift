@@ -16,15 +16,31 @@ import CoreLocation
 {
     public override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .gray
+        self.view.backgroundColor = .clear
+        self.tabBar.backgroundColor = .systemBlue
+        self.tabBar.tintColor = .black
         
-        let vc1 = MainViewController.init()
+        let vc1 = UINavigationController.init(rootViewController: MainViewController.init())
         do {
             vc1.tabBarItem.title = "首页"
             vc1.tabBarItem.image = UIImage(named: "mapicon")
+            vc1.isNavigationBarHidden = false
+            vc1.navigationBar.backgroundColor = .systemBlue
+            vc1.navigationBar.tintColor = .white
+            if #available(iOS 13.0, *) {
+                let navBarAppearance = UINavigationBarAppearance()
+                do {
+                    navBarAppearance.configureWithOpaqueBackground()
+                    navBarAppearance.backgroundColor = .systemBlue
+                }
+                vc1.navigationBar.standardAppearance = navBarAppearance
+                vc1.navigationBar.scrollEdgeAppearance = navBarAppearance
+            } else {
+                vc1.edgesForExtendedLayout = []
+            }
         }
         
-        let vc2 = UIViewController.init()
+        let vc2 = UINavigationController.init(rootViewController: UIViewController.init())
         do {
             vc2.view.backgroundColor = UIColor.white
             vc2.tabBarItem.title = "我"
