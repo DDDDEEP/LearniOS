@@ -14,27 +14,49 @@ import CoreLocation
 
 @objc public class MainTabBarViewController: UITabBarController
 {
+    public struct UI {
+        static let barColor = UIColor.systemBlue
+    }
     public override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .clear
-        self.tabBar.backgroundColor = .systemBlue
-        self.tabBar.tintColor = .black
+        view.backgroundColor = .clear
+        tabBar.backgroundColor = UI.barColor
+        tabBar.tintColor = .black
+        tabBar.isTranslucent = false
+        if #available(iOS 13.0, *) {
+            let appearance = UITabBarAppearance()
+            do {
+                appearance.configureWithOpaqueBackground()
+                appearance.backgroundColor = UI.barColor
+            }
+            tabBar.standardAppearance = appearance
+            if #available(iOS 15.0, *) {
+                tabBar.scrollEdgeAppearance = appearance
+            }
+        }
         
-        let vc1 = UINavigationController.init(rootViewController: MainViewController.init())
+        let mainListVC = MainListViewContoller.init(withList: [
+            FeatGLKViewController.self,
+            FeatCollectionViewController.self,
+            
+            // zymmmmmmmmmmmmmmmmmmm
+            PagingCollectionViewController.self,
+        ])
+        let vc1 = UINavigationController.init(rootViewController: mainListVC)
         do {
             vc1.tabBarItem.title = "首页"
             vc1.tabBarItem.image = UIImage(named: "mapicon")
             vc1.isNavigationBarHidden = false
-            vc1.navigationBar.backgroundColor = .systemBlue
+            vc1.navigationBar.backgroundColor = UI.barColor
             vc1.navigationBar.tintColor = .white
             if #available(iOS 13.0, *) {
-                let navBarAppearance = UINavigationBarAppearance()
+                let appearance = UINavigationBarAppearance()
                 do {
-                    navBarAppearance.configureWithOpaqueBackground()
-                    navBarAppearance.backgroundColor = .systemBlue
+                    appearance.configureWithOpaqueBackground()
+                    appearance.backgroundColor = UI.barColor
                 }
-                vc1.navigationBar.standardAppearance = navBarAppearance
-                vc1.navigationBar.scrollEdgeAppearance = navBarAppearance
+                vc1.navigationBar.standardAppearance = appearance
+                vc1.navigationBar.scrollEdgeAppearance = appearance
             } else {
                 vc1.edgesForExtendedLayout = []
             }

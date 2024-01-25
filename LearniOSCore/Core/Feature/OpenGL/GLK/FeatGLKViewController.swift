@@ -1,5 +1,5 @@
 //
-// MainGLKViewController.swift
+// FeatGLKViewController.swift
 // LearniOS
 //
 // Created by DEEP on 2023/12/7
@@ -12,7 +12,7 @@ import GLKit
 import BlocksKit
 
 
-class MainGLKViewController: UIViewController
+class FeatGLKViewController: UIViewController
 {
     override func viewDidLoad() {
         super.viewDidLoad()
