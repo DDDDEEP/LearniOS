@@ -104,4 +104,8 @@ node_modules/
 Configuration/user.xcconfig
 config.rb
 LearniOSCore/Playground/*
+!LearniOSCore/Playground/Task/
+LearniOSCore/Playground/Task/*.h
+LearniOSCore/Playground/Task/*.m
+LearniOSCore/Playground/Task/*.swift
 !LearniOSCore/Playground/Playground-Bridging-Header.h

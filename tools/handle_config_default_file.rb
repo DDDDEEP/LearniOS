@@ -4,27 +4,36 @@
 # =======================================================
 
 require "fileutils"
+require "find"
+
+def copy_default_file_if_not_exists(default_path)
+  path = default_path.gsub('.default', '')
+  if !File.exist?(path)
+    FileUtils.cp(default_path, path)
+  end
+end
+
+def find_default_files(directory)
+  default_files = []
+  Find.find(directory) do |path|
+    default_files << path if path =~ /.*\.default$/
+  end
+  default_files
+end
 
 # ================== 拷贝出用户自定义文件 ==================
 project_dir = ENV["PROJECT_DIR"] || "#{__dir__}/.."
-PLAYGROUND_HEADER_NAME = "Playground-Bridging-Header.h"
-PLAYGROUND_HEADER_PATH = "#{project_dir}/LearniOSCore/Playground/#{PLAYGROUND_HEADER_NAME}"
-PLAYGROUND_HEADER_DEFAULT_PATH = "#{PLAYGROUND_HEADER_PATH}.default"
+PLAYGROUND_HEADER_DEFAULT_PATH = "#{project_dir}/LearniOSCore/Playground/Playground-Bridging-Header.h.default"
+USER_CONFIG_DEFAULT_PATH = "#{project_dir}/Configuration/user.xcconfig.default"
+CONFIG_DEFAULT_PATH = "#{project_dir}/config.rb.default"
 
-USER_CONFIG_PATH = "#{project_dir}/Configuration/user.xcconfig"
-USER_CONFIG_DEFAULT_PATH = "#{USER_CONFIG_PATH}.default"
+copy_default_file_if_not_exists(PLAYGROUND_HEADER_DEFAULT_PATH)
+copy_default_file_if_not_exists(USER_CONFIG_DEFAULT_PATH)
+copy_default_file_if_not_exists(CONFIG_DEFAULT_PATH)
 
-CONFIG_PATH = "#{project_dir}/config.rb"
-CONFIG_DEFAULT_PATH = "#{CONFIG_PATH}.default"
-
-if !File.exist?(PLAYGROUND_HEADER_PATH)
-  FileUtils.cp(PLAYGROUND_HEADER_DEFAULT_PATH, PLAYGROUND_HEADER_PATH)
-end
-if !File.exist?(USER_CONFIG_PATH)
-  FileUtils.cp(USER_CONFIG_DEFAULT_PATH, USER_CONFIG_PATH)
-end
-if !File.exist?(CONFIG_PATH)
-  FileUtils.cp(CONFIG_DEFAULT_PATH, CONFIG_PATH)
+playground_task_default_files = find_default_files("#{project_dir}/LearniOSCore/Playground/Task")
+playground_task_default_files.each do |default_path|
+    copy_default_file_if_not_exists(default_path)
 end
 
 # ================== 开启 Playground 功能（已废弃） ==================

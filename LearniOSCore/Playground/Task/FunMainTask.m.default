@@ -1,0 +1,21 @@
+//
+// FunMainTask.m
+// LearniOSCore-BusinessUtils-Core-InHouse-Playground-Utils
+//
+// Created by zhongyaoming.deep on 2024/1/29
+// Copyright © 2024 Bytedance. All rights reserved.
+//
+        
+
+#import "FunMainTask.h"
+#import <LearniOSCore/LearniOSCore-Swift.h>
+
+static void __attribute__((constructor)) bootstrap_load(void) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [FunSubMainTask excute];
+        
+//        FunSwiftViewController *swiftVC = [[FunSwiftViewController alloc] init];
+//        [[DepUIKit topViewController] presentViewController:swiftVC animated:YES completion:^{
+//        }];
+    });
+}

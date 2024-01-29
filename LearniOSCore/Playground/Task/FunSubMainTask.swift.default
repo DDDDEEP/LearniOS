@@ -1,0 +1,18 @@
+//
+// FunSubMainTask.swift
+// LearniOSCore-BusinessUtils-Core-InHouse-Playground-Utils
+//
+// Created by zhongyaoming.deep on 2024/1/26
+// Copyright © 2024 Bytedance. All rights reserved.
+//
+        
+
+import Foundation
+
+
+@objc public class FunSubMainTask: NSObject {
+    @objc public static func excute() {
+        let vc = CombineCarasoulViewController.init()
+        DepUIKit.topViewController()?.navigationController?.pushViewController(vc, animated: true)
+    }
+}
