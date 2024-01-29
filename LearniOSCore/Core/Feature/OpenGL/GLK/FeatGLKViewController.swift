@@ -16,14 +16,14 @@ class FeatGLKViewController: UIViewController
 {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        let mainListVC = MainListViewContoller.init(withList: [
+            ExampleGLKViewController.self,
+            CameraGLKViewController.self,
+        ])
         
-        let glkVC = ExampleGLKViewController.init()
-        do {
-            self.addChild(glkVC)
-            self.view.addSubview(glkVC.view)
-            glkVC.willMove(toParent: self)
-        }
+        self.addChild(mainListVC)
+        view.addSubview(mainListVC.view)
+        mainListVC.willMove(toParent: self)
     }
 }
 
