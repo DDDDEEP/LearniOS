@@ -17,6 +17,7 @@ class FeatCollectionViewController : UIViewController
         let mainListVC = MainListViewContoller.init(withList: [
             PagingCollectionViewController.self,
             WaterFallFlowViewController.self,
+            CombineCarasoulViewController.self,
         ])
         
         self.addChild(mainListVC)

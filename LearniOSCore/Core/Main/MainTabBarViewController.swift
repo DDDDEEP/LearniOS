@@ -38,9 +38,6 @@ import CoreLocation
         let mainListVC = MainListViewContoller.init(withList: [
             FeatGLKViewController.self,
             FeatCollectionViewController.self,
-            
-            // zymmmmmmmmmmmmmmmmmmm
-            PagingCollectionViewController.self,
         ])
         let vc1 = UINavigationController.init(rootViewController: mainListVC)
         do {

@@ -3,5 +3,8 @@
 //
 
 
-#import "ExampleGLKViewController.h"
+//#import "ExampleGLKViewController.h"
+//#import "DepUIKit.h"
+#import <LearniOSCore/ExampleGLKViewController.h>
+#import <LearniOSCore/DepUIKit.h>
 

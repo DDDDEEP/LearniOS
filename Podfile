@@ -30,6 +30,7 @@ project "LearniOS", "LearniOSDebug" => :debug, "LearniOSRelease" => :release, "L
 
 def common_pods
   pod 'YYKit', git: 'https://github.com/xiaoerlong/YYKit.git'
+  pod 'fishhook', :git => 'https://github.com/shino-996/fishhook.git', :branch => 'fix-iOS-14.5-crash'
   pod "LearniOSCore", :modular_headers => true, :inhibit_warnings => false, :subspecs => ["Core"], :path => "./LearniOSCore/"
 #  pod "LearniOSCore", :modular_headers => true, :inhibit_warnings => false, :subspecs => ["Core"], :path => "./LearniOSCore/"
 end

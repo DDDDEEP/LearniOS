@@ -44,7 +44,11 @@ DESC
   s.dependency "BlocksKit"
   s.dependency "Mantle"
   s.dependency "YYKit"
+  s.dependency "fishhook"
   s.dependency "MGJRouter_Swift"
+  s.dependency "OpenCombine"
+  s.dependency "OpenCombineDispatch"
+  s.dependency "CombineCocoa"
 
   # ---------------- subspec ----------------
   # 通用方法
