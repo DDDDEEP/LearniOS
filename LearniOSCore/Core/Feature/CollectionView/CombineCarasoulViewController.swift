@@ -38,15 +38,16 @@ class CombineCarasoulViewController : UIViewController {
 class BaseCarasoulCollectionView : UICollectionView {
     fileprivate struct Cst {
         static let cellReuseIdentifier = "cell"
-        static let changePageTolerance = 0.7
+        static let changePageTolerance = 0.9
     }
     public struct Layout : Equatable {
         static let textBackgroundColor = UIColor.red
         static let cellBackgroundColor = UIColor.blue
         static let itemSizeNumber = 70.0
-        var itemSize = CGSize(width: Self.itemSizeNumber, height: Self.itemSizeNumber)
-        var itemMargin = 20.0
-        var visibleItemCount = 4
+        public var itemSize = CGSize(width: Self.itemSizeNumber, height: Self.itemSizeNumber)
+        public var itemMargin = 20.0
+        public var visibleItemCount = 4
+        public init() {}
     }
     @OpenCombine.Published
     public var layout = Layout()
@@ -91,9 +92,12 @@ class BaseCarasoulCollectionView : UICollectionView {
     private func setupBinding() {
         $layout.receive(on: DispatchQueue.main.ocombine)
             .removeDuplicates()
-            .sinkUntilFinished { [weak self] layout in
+            .scan((old:nil, new:nil), { pairs, newValue in
+                return (old:pairs.new, new:newValue)
+            })
+            .sinkUntilFinished { [weak self] pairs in
                 guard let self = self else { return }
-                self.updateLayout()
+                self.layoutDidUpdate(old: pairs.old)
             }
     }
     
@@ -136,24 +140,29 @@ extension BaseCarasoulCollectionView {
         calcResult.numberOfItems = numberOfItems
     }
     
-    private func updateLayout() {
+    private func layoutDidUpdate(old oldLayout: Layout?) {
         calculatePageNumberResult()
         
         // 更新可变约束
-        if mutableConstraints.pageControl == nil {
-            ({
-                var constraints = MutableConstraints.PageControl()
-                self.snp.makeConstraints { (m) in
-                    constraints.width = m.width.equalTo(0).constraint
-                    constraints.height = m.height.equalTo(0).constraint
-                }
-                $0 = constraints
-            })(&mutableConstraints.pageControl)
-        }
-        let constraints = mutableConstraints.pageControl
-        let width = (layout.itemSize.width + layout.itemMargin) * CGFloat(layout.visibleItemCount) - layout.itemMargin
-        constraints?.width?.update(offset: width)
-        constraints?.height?.update(offset: layout.itemSize.height)
+        repeat {
+            if oldLayout?.itemSize == layout.itemSize {
+                break
+            }
+            if mutableConstraints.pageControl == nil {
+                ({
+                    var constraints = MutableConstraints.PageControl()
+                    self.snp.makeConstraints { (m) in
+                        constraints.width = m.width.equalTo(0).constraint
+                        constraints.height = m.height.equalTo(0).constraint
+                    }
+                    $0 = constraints
+                })(&mutableConstraints.pageControl)
+            }
+            let constraints = mutableConstraints.pageControl
+            let width = (layout.itemSize.width + layout.itemMargin) * CGFloat(layout.visibleItemCount) - layout.itemMargin
+            constraints?.width?.update(offset: width)
+            constraints?.height?.update(offset: layout.itemSize.height)
+        } while(false)
         
         setNeedsLayout()
         reloadData()

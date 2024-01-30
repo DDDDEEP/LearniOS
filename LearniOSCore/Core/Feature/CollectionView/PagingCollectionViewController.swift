@@ -70,10 +70,10 @@ class PagingCollectionViewController : UICollectionViewController
             collectionView.register(PagingCollectionViewCell.self, forCellWithReuseIdentifier:Cst.reuseIdentifier)
             collectionView.isPagingEnabled = true
         }
-        collectionView.snp.makeConstraints { (m) in
-            m.center.equalToSuperview()
-            m.width.equalTo(UI.collectionWidth)
-            m.height.equalTo(UI.collectionHeight)
+        collectionView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.width.equalTo(UI.collectionWidth)
+            make.height.equalTo(UI.collectionHeight)
         }
     }
     
