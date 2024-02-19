@@ -57,16 +57,6 @@ class BaseCarasoulCollectionView : UICollectionView {
     @OpenCombine.Published
     private var itemList: [String] = (1...100).map { String($0) }
     
-    /// 中线所对应的翻页进度
-    /// 默认为 0.5，即第一页；当进度超过 1.0 时，为第二页
-    private var currentPageProgress = Cst.defaultPageProgress
-    
-    private var _nextCurrentPage = 0
-    private var nextCurrentPage: Int {
-        get { _nextCurrentPage }
-        set { _nextCurrentPage = max(0, min(calcResult.numberOfPages - 1, newValue)) }
-    }
-    
     public init() {
         let flowLayout = BaseCarasoulCollectionViewLayout()
         super.init(frame: .zero, collectionViewLayout: flowLayout)
@@ -129,7 +119,7 @@ class BaseCarasoulCollectionView : UICollectionView {
     private var mutableConstraints = MutableConstraints()
 
     /// 翻页相关数值的计算结果
-    private struct CalculatePageNumberResult {
+    private struct PaginationProps {
         var itemCount = 0
         var visibleItemCount = 0
         var numberOfPages = 0
@@ -138,27 +128,37 @@ class BaseCarasoulCollectionView : UICollectionView {
         var numberOfItems = 0
         var onePageOffset = 0.0
         var onePageSize = 0.0
+        
+        /// 中线所对应的翻页进度
+        /// 默认为 0.5，即第一页；当进度超过 1.0 时，为第二页
+        var currentPageProgress = Cst.defaultPageProgress
+        
+        var _nextCurrentPage = 0
+        var nextCurrentPage: Int {
+            get { _nextCurrentPage }
+            set { _nextCurrentPage = max(0, min(numberOfPages - 1, newValue)) }
+        }
     }
-    private var calcResult = CalculatePageNumberResult()
+    private var paginationProps = PaginationProps()
 }
 
 // MARK: BaseCarasoulCollectionView - Update Layout
 extension BaseCarasoulCollectionView {
     private func calculatePageNumberResult() {
         let itemCount = itemList.count
-        calcResult.itemCount = itemCount
+        paginationProps.itemCount = itemCount
         
         let visibleItemCount = layout.visibleItemCount
-        calcResult.visibleItemCount = visibleItemCount
+        paginationProps.visibleItemCount = visibleItemCount
         
         let numberOfPages = (itemCount + visibleItemCount - 1) / visibleItemCount
         let numberOfItems = numberOfPages * visibleItemCount
-        calcResult.numberOfPages = numberOfPages
-        calcResult.numberOfItems = numberOfItems
+        paginationProps.numberOfPages = numberOfPages
+        paginationProps.numberOfItems = numberOfItems
         
-        let onePageOffset = (layout.itemSize.width + layout.itemMargin) * CGFloat(calcResult.visibleItemCount)
-        calcResult.onePageOffset = onePageOffset
-        calcResult.onePageSize = onePageOffset - layout.itemMargin
+        let onePageOffset = (layout.itemSize.width + layout.itemMargin) * CGFloat(paginationProps.visibleItemCount)
+        paginationProps.onePageOffset = onePageOffset
+        paginationProps.onePageSize = onePageOffset - layout.itemMargin
     }
     
     private func layoutDidUpdate(old oldLayout: Layout?) {
@@ -177,7 +177,7 @@ extension BaseCarasoulCollectionView {
                 })(&mutableConstraints.pageControl)
             }
             let constraints = mutableConstraints.pageControl
-            let width = calcResult.onePageSize
+            let width = paginationProps.onePageSize
             
             constraints?.width?.update(offset: width)
             constraints?.height?.update(offset: layout.itemSize.height)
@@ -219,10 +219,11 @@ extension BaseCarasoulCollectionView : UICollectionViewDelegate, UICollectionVie
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetX = scrollView.contentOffset.x
-        currentPageProgress = offsetX / calcResult.onePageOffset + Cst.defaultPageProgress
+        var currentPageProgress = offsetX / paginationProps.onePageOffset + Cst.defaultPageProgress
         currentPageProgress = (currentPageProgress.isInfinite || currentPageProgress.isNaN) ? 0.0 : currentPageProgress
-        nextCurrentPage = Int(floor(currentPageProgress))
-        print("// zymmmmmmmmmmmmmmmmmmm, \(#function), \(nextCurrentPage), \(currentPageProgress)")
+        paginationProps.currentPageProgress = currentPageProgress
+        paginationProps.nextCurrentPage = Int(floor(currentPageProgress))
+        print("// zymmmmmmmmmmmmmmmmmmm, \(#function), \(paginationProps.nextCurrentPage), \(paginationProps.currentPageProgress)")
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -250,9 +251,9 @@ extension BaseCarasoulCollectionView : UICollectionViewDelegate, UICollectionVie
         // 假设此时 progress = 3.35，currentPage = 3
         // 当 velocity.x > 0 时，则下一页 nextPage = 4；
         // 当 velocity.x < 0 时，则上一页 nextPage = 2；
-        let nextPage = (velocity.x > 0 ? ceil(currentPageProgress) : floor(currentPageProgress) - 1)
-        nextCurrentPage = Int(nextPage)
-        print("// zymmmmmmmmmmmmmmmmmmm, \(#function), \(nextCurrentPage), \(currentPageProgress)")
+        let nextPage = (velocity.x > 0 ? ceil(paginationProps.currentPageProgress) : floor(paginationProps.currentPageProgress) - 1)
+        paginationProps.nextCurrentPage = Int(nextPage)
+        print("// zymmmmmmmmmmmmmmmmmmm, \(#function), \(paginationProps.nextCurrentPage), \(paginationProps.currentPageProgress)")
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -296,8 +297,8 @@ extension BaseCarasoulCollectionView : UICollectionViewDelegate, UICollectionVie
      - SeeAlso: `when(resolved:)`
      */
     private func stabilizePageIndex(_ scrollView: UIScrollView) {
-        let onePageOffset = calcResult.onePageOffset
-        let newContentOffsetX = CGFloat(nextCurrentPage) * onePageOffset
+        let onePageOffset = paginationProps.onePageOffset
+        let newContentOffsetX = CGFloat(paginationProps.nextCurrentPage) * onePageOffset
 //        scrollView.contentOffset.x = newContentOffsetX
         
         // 最原始的动画方式
